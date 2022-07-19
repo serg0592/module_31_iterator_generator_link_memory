@@ -6,7 +6,9 @@
         }
 
         function action_index() {
-            $this->model->moderate();
+            $this->model->get('../engine/views/old_view.php');
+            $this->model->check();
+            $this->model->delete($this->model->deleteData);
             $this->view->generate('new_view.php');
         }
     }
