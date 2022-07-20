@@ -8,7 +8,6 @@ class Route
 		$action_name = 'index';
 
         //проверка наличия имя контроллера в GET
-		$_GET['url'] = 'new';
 		if (isset($_GET['url'])) {
 			switch ($_GET['url']) {
 				case 'old';
@@ -53,6 +52,7 @@ class Route
 		}
 		else
 		{
+			//вызываем страницу с ошибкой 404
 		    Route::ErrorPage404();
 		};
 	}
